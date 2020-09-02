@@ -4,3 +4,5 @@ Code for an python app which gathers temperature readings from BLE xiaomi miija 
 credits:<br/>
 DeviceClient.py comes from https://github.com/bechynsky/AzureIoTDeviceClientPY<br/>
 LYWSD03MMC.py comes from https://github.com/JsBergbau/MiTemperature2
+
+could be used in conjunction with https://github.com/mjazwiecki/tempReadingToCosmosDb
