@@ -74,8 +74,7 @@ while i < len(lines):
         x_encode_weatherdata = json.dumps(
             x_weatherdata, indent=1).encode('utf-8')
         try:
-            send = device.send(x_encode_weatherdata)
-            if send == 204:
+            if device.send(x_encode_weatherdata) == 204:
                 e = lines[i]
                 print("Message sent to IoT Hub: " + str(x_encode_weatherdata))
                 liness.remove(e)
@@ -87,8 +86,7 @@ while i < len(lines):
         data_dict = literal_eval(lines[i])
         r_encode_weatherdata = json.dumps(data_dict, indent=1).encode('utf-8')
         try:
-            send = device.send(r_encode_weatherdata)
-            if send == 204:
+            if device.send(r_encode_weatherdata) == 204:
                 e = lines[i]
                 print("Message sent to IoT Hub: " + str(r_encode_weatherdata))
                 liness.remove(e)
