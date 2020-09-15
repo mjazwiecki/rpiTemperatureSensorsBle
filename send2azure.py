@@ -70,7 +70,7 @@ while i < len(lines):
         part = lines[i].split(" ")
         ts = datetime.datetime.fromtimestamp(float(part[6]), tz=timezone.utc)
         x_weatherdata = {"humidity": float(part[3]), "temperature": float(part[2]), "batteryLevel": float(
-            part[5]), "timestamp": str(ts), "mac": part[1].replace(':', '').lower()}
+            part[5]), "timestamp": str(ts.isoformat()), "mac": part[1].replace(':', '').lower()}
         x_encode_weatherdata = json.dumps(
             x_weatherdata, indent=1).encode('utf-8')
         try:
