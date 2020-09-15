@@ -1,5 +1,5 @@
 # rpiTemperatureSensorsBle
-Code for an python app which gathers temperature readings from BLE xiaomi miija and ruuvitag sensors and send them to azure iot hub. The idea is to run it as a root using cron.
+Code for an python app which gathers temperature readings from BLE xiaomi miija and ruuvitag sensors and send them to azure iot hub. The idea is to run it as a root using cron. The format of the message allows for easy azure time series ingestion.
 
 Credits:<br/>
 DeviceClient.py comes from https://github.com/bechynsky/AzureIoTDeviceClientPY<br/>
